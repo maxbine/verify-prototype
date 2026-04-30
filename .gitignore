@@ -1,0 +1,15 @@
+# Local CLI / editor config
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Defensive — we don't use Node, but ignore if anyone adds a package later
+node_modules/
+.vercel/
+.env
+.env.local
