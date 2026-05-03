@@ -210,6 +210,13 @@ input, textarea, select { font-family: inherit; }
   align-items: center;
   justify-content: center;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+/* Hide the demo FAB whenever a modal is open so it can't overlap modal buttons. */
+body.has-modal .drawer-toggle {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
 }
 
 /* Floating feedback affordance — meta-control, deliberately
@@ -790,6 +797,29 @@ input, textarea, select { font-family: inherit; }
 .result-card--system .result-card__icon i { color: var(--cool-500); }
 
 .result-card__title { line-height: 1.1; margin-bottom: 4px; }
+.result-card__manual {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-700);
+  background: var(--secondary-50);
+  border: 1px solid var(--secondary-200);
+  padding: 4px 10px;
+  border-radius: var(--r-pill);
+  margin: 6px 0 8px;
+  letter-spacing: -0.005em;
+}
+.detail-header__manual {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-700);
+  background: var(--secondary-50);
+  border: 1px solid var(--secondary-200);
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  margin-top: 10px;
+}
 .result-card--eligible .result-card__title { color: var(--success-500); }
 .result-card--action .result-card__title,
 .result-card--rejected .result-card__title { color: var(--secondary-700); }
@@ -908,15 +938,20 @@ input, textarea, select { font-family: inherit; }
    Bottom sheet (payer picker, share confirmation).
    ============================================================ */
 
-.modal-root, .toast-root {
+.modal-root {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+}
+.modal-root:empty { pointer-events: none; }
+
+.toast-root {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 60;
+  z-index: 65;
 }
-.modal-root .modal-host, .toast-root .toast-host {
-  pointer-events: auto;
-}
+.toast-root > * { pointer-events: auto; }
 
 .scrim {
   position: absolute;
