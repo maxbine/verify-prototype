@@ -68,6 +68,13 @@ function back() {
 
 function openModal(name, params = {}) { State.modal = name; State.modalParams = params; render(); }
 function closeModal() { State.modal = null; State.modalParams = {}; render(); }
+
+/* Cancel from the pre-share sheet: dismiss + return to Home (per UX feedback). */
+window.cancelShare = function () {
+  State.modal = null;
+  State.modalParams = {};
+  navigate('home');
+};
 function showToast(text, ms = 2000) {
   State.toast = { text, id: Date.now() };
   render();
@@ -180,6 +187,11 @@ function render() {
   toastRoot.innerHTML = State.toast
     ? `<div class="toast"><i data-lucide="check"></i>${esc(State.toast.text)}</div>`
     : '';
+
+  // Reflect modal-open state on body so we can hide overlapping demo affordances.
+  if (typeof document !== 'undefined' && document.body) {
+    document.body.classList.toggle('has-modal', !!State.modal);
+  }
 
   // (Re-)bind lucide
   if (window.lucide) lucide.createIcons();
@@ -568,12 +580,17 @@ function renderResultCardForPatient(p) {
     `
   }[p.outcome] || '';
 
+  const manualLine = p.outcome === 'action'
+    ? `<div class="result-card__manual">Manual verification is needed.</div>`
+    : '';
+
   return `
     <div class="result-card ${variant}">
       <div class="result-card__header">
         <div class="result-card__icon"><i data-lucide="${iconName}"></i></div>
         <div>
           <div class="t-h2 result-card__title">${esc(titleText)}</div>
+          ${manualLine}
           <div class="result-card__summary">${esc(p.summary)}</div>
         </div>
       </div>
@@ -627,6 +644,9 @@ SCREENS.resultDetail = function (params) {
         <span>${esc(p.timestampAbs)}</span>
         ${badge(p.badge)}
       </div>
+      ${p.outcome === 'action'
+        ? `<div class="detail-header__manual">Manual verification is needed.</div>`
+        : ''}
 
       <div class="segmented" role="tablist">
         <button class="segmented__item ${State.detailMode === 'plain' ? 'is-active' : ''}"
@@ -1050,6 +1070,58 @@ window.selectPayer = function (name) {
 
 window.openShareSheet = function (id) { openModal('share', { patientId: id }); };
 
+/* Trigger native share (Web Share API) or fall back to clipboard.
+   We share text + URL — there's no real PDF blob in this prototype. */
+window.shareEligibility = async function (id) {
+  const p = PATIENTS_BY_ID[id];
+  if (!p) return;
+
+  const title = `Eligibility check — ${p.firstName} ${p.lastName}`;
+  const summary = `${p.firstName} ${p.lastName} · ${p.payer} · ${p.badge.text}`;
+  const url = (typeof window !== 'undefined' && window.location && window.location.href)
+    ? window.location.href
+    : '';
+  const shareText = `${summary}\nVerify (Coastal Home Health) — ${url}`;
+
+  // Prefer native share sheet on supported devices (iOS Safari, Android Chrome, etc.).
+  if (typeof navigator !== 'undefined' && typeof navigator.share === 'function') {
+    try {
+      await navigator.share({ title, text: summary, url: url || undefined });
+      State.modal = null;
+      State.modalParams = {};
+      navigate('home');
+      showToast('Shared', 1800);
+      return;
+    } catch (err) {
+      // User aborted (AbortError) or browser blocked — fall through to clipboard.
+      if (err && err.name === 'AbortError') return;
+    }
+  }
+
+  // Fallback: copy to clipboard.
+  try {
+    if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(shareText);
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = shareText;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+    State.modal = null;
+    State.modalParams = {};
+    navigate('home');
+    showToast('Copied to clipboard', 2200);
+  } catch (err) {
+    showToast('Could not share. Please try again.', 2400);
+  }
+};
+
 function renderSharePreSheet() {
   const p = PATIENTS_BY_ID[State.modalParams.patientId];
   if (!p) return '';
@@ -1074,10 +1146,10 @@ function renderSharePreSheet() {
       <div class="share-sheet__hipaa">This document contains PHI. Only share with authorized recipients.</div>
 
       <div class="share-sheet__buttons">
-        <button class="btn btn--primary btn--full" onclick="openModal('ios-share',{patientId:'${p.id}'})">
+        <button class="btn btn--primary btn--full" onclick="shareEligibility('${p.id}')">
           <i data-lucide="share"></i> Share via…
         </button>
-        <button class="btn btn--ghost btn--full" onclick="closeModal()" style="text-align:center;justify-content:center">Cancel</button>
+        <button class="btn btn--ghost btn--full" onclick="cancelShare()" style="text-align:center;justify-content:center">Cancel</button>
       </div>
     </div>
   `;
