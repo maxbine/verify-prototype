@@ -4,6 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sella logo concepts — review</title>
+  <script>
+    // Vercel cleanUrls strips trailing slashes (e.g. /concepts), which
+    // makes the browser resolve relative paths against the parent dir.
+    // Inject a <base> so relative <img> srcs still resolve to /concepts/.
+    (function () {
+      var path = window.location.pathname;
+      if (!path.endsWith('/') && !/\.[a-z0-9]+$/i.test(path)) {
+        var base = document.createElement('base');
+        base.href = path + '/';
+        document.head.insertBefore(base, document.head.firstChild);
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
