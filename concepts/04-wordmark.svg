@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept 4 — Wordmark-only: 'sella' set in tight modern lowercase with the brand-orange dot terminator already established by Verify, leaning on type alone. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="480" height="160" role="img" aria-label="Sella wordmark">
+  <text x="240" y="108"
+        text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="100"
+        font-weight="700"
+        fill="#2D2942"
+        letter-spacing="-4">sella</text>
+  <circle cx="358" cy="84" r="9" fill="#E96424"/>
+</svg>

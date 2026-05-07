@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept 5 — Geometric mark: the brand fingerprint distilled — warm canvas, cool ink, single orange answer-dot — works as an app icon out of the box. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella canvas mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <rect x="56" y="56" width="144" height="144" rx="32" ry="32" fill="#2D2942"/>
+  <circle cx="172" cy="172" r="12" fill="#E96424"/>
+</svg>

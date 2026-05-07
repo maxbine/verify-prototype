@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept 6 — Geometric/lockup: an almost-closed ring with the brand-orange dot completing it — precision, focus, the moment a check resolves; paired with the wordmark. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 192" width="480" height="192" role="img" aria-label="Sella aperture lockup">
+  <!-- the mark -->
+  <g transform="translate(96, 96)">
+    <!-- 330° arc, gap at top -->
+    <path d="M 17 -62 A 64 64 0 1 1 -17 -62"
+          fill="none"
+          stroke="#2D2942"
+          stroke-width="16"
+          stroke-linecap="round"/>
+    <!-- orange dot completing the ring -->
+    <circle cx="0" cy="-64" r="9" fill="#E96424"/>
+  </g>
+  <!-- wordmark -->
+  <text x="216" y="118"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="72"
+        font-weight="600"
+        fill="#2D2942"
+        letter-spacing="-2.5">sella</text>
+</svg>
