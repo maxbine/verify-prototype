@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept 1 — Letterform: a custom 'S' monogram on the warm-canvas / cool-ink fingerprint, sized to read as a confident app icon and favicon at 16px. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella lettermark — S monogram">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 184 88
+           C 184 73 168 60 128 60
+           C 88 60 72 73 72 96
+           C 72 116 92 124 128 128
+           C 164 132 184 140 184 160
+           C 184 183 168 196 128 196
+           C 88 196 72 183 72 168"
+        fill="none"
+        stroke="#2D2942"
+        stroke-width="24"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+</svg>
