@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v2-6 — Clipped tag: an asymmetric horizontal record card with a cut top-right corner — references the document/identifier without illustration; orange dot lives in the cut. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella clipped tag mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 36 88
+           L 196 88
+           L 220 112
+           L 220 168
+           L 36 168
+           Z"
+        fill="#2D2942"/>
+  <circle cx="204" cy="100" r="9" fill="#E96424"/>
+</svg>

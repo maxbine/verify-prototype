@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v2-5 — Viewfinder: four corner brackets framing a primary-500 dot — precision and focus made geometric, conceptually 'the answer is here, in this frame'. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella viewfinder mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <g fill="none" stroke="#2D2942" stroke-width="14" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M 60 96 L 60 60 L 96 60"/>
+    <path d="M 160 60 L 196 60 L 196 96"/>
+    <path d="M 60 160 L 60 196 L 96 196"/>
+    <path d="M 160 196 L 196 196 L 196 160"/>
+  </g>
+  <circle cx="128" cy="128" r="14" fill="#E96424"/>
+</svg>

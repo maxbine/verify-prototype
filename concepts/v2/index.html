@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sella logo concepts v2 — review</title>
+  <script>
+    // Vercel cleanUrls strips trailing slashes (e.g. /concepts/v2), which
+    // makes the browser resolve relative paths against the parent dir.
+    // Inject a <base> so relative <img> srcs still resolve correctly.
+    (function () {
+      var path = window.location.pathname;
+      if (!path.endsWith('/') && !/\.[a-z0-9]+$/i.test(path)) {
+        var base = document.createElement('base');
+        base.href = path + '/';
+        document.head.insertBefore(base, document.head.firstChild);
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-500: #E96424;
+      --cool-100: #DDDDE1;
+      --cool-200: #BEBDC4;
+      --cool-300: #8A8893;
+      --cool-400: #58566A;
+      --cool-700: #2D2942;
+      --warm-50: #FFFFFF;
+      --warm-100: #F2EFEC;
+      --warm-200: #DDDAD4;
+      --dark-bg: #14121F;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: var(--cool-700);
+      background: var(--warm-100);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 32px 96px;
+    }
+
+    .page__header {
+      margin-bottom: 56px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--cool-100);
+    }
+    .page__eyebrow {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary-500);
+      margin: 0 0 8px;
+    }
+    .page__title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin: 0 0 8px;
+    }
+    .page__title-dot {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--primary-500);
+      margin-left: 4px;
+      vertical-align: 6px;
+    }
+    .page__sub {
+      font-size: 15px;
+      color: var(--cool-400);
+      margin: 0;
+      max-width: 64ch;
+      line-height: 1.55;
+    }
+    .page__sub strong { color: var(--cool-700); font-weight: 600; }
+    .page__back {
+      display: inline-block;
+      font-size: 13px;
+      color: var(--cool-400);
+      text-decoration: none;
+      margin-bottom: 12px;
+      padding: 4px 0;
+    }
+    .page__back:hover { color: var(--cool-700); }
+
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .toc a {
+      font-size: 13px;
+      color: var(--cool-400);
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid var(--cool-100);
+      border-radius: 999px;
+      background: var(--warm-50);
+      transition: color 150ms ease-out, border-color 150ms ease-out;
+    }
+    .toc a:hover {
+      color: var(--cool-700);
+      border-color: var(--cool-300);
+    }
+
+    .concept {
+      background: var(--warm-50);
+      border: 1px solid var(--cool-100);
+      border-radius: 16px;
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+    .concept__header {
+      padding: 28px 32px 24px;
+      border-bottom: 1px solid var(--cool-100);
+    }
+    .concept__meta {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+    .concept__num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cool-300);
+    }
+    .concept__title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0;
+    }
+    .concept__rationale {
+      font-size: 14px;
+      color: var(--cool-400);
+      margin: 0;
+      max-width: 76ch;
+      line-height: 1.55;
+    }
+    .concept__bold-move {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary-500);
+      margin-top: 8px;
+    }
+    .concept__filename {
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 12px;
+      color: var(--cool-300);
+      margin-top: 6px;
+    }
+
+    .panel { padding: 32px; overflow-x: auto; }
+    .panel--light { background: var(--warm-50); }
+    .panel--dark { background: var(--dark-bg); }
+    .panel + .panel { border-top: 1px solid var(--cool-100); }
+    .panel--dark + .panel,
+    .panel + .panel--dark { border-top-color: rgba(255, 255, 255, 0.08); }
+
+    .panel__label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cool-300);
+      margin: 0 0 20px;
+    }
+    .panel--dark .panel__label { color: rgba(255, 255, 255, 0.45); }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: 32px;
+    }
+
+    .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .cell__stage {
+      display: flex;
+      align-items: flex-end;
+      min-height: 16px;
+    }
+    .cell__stage img {
+      display: block;
+      max-width: none;
+    }
+    .cell__caption {
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 11px;
+      color: var(--cool-300);
+      letter-spacing: 0.02em;
+    }
+    .panel--dark .cell__caption { color: rgba(255, 255, 255, 0.45); }
+
+    .legend {
+      margin-top: 8px;
+      padding: 14px 16px;
+      background: var(--warm-100);
+      border: 1px solid var(--cool-100);
+      border-radius: 12px;
+      font-size: 12px;
+      color: var(--cool-400);
+      line-height: 1.5;
+    }
+    .legend strong { color: var(--cool-700); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <a class="page__back" href="../">← back to v1 concepts</a>
+      <p class="page__eyebrow">Version 2 · response to "all bland"</p>
+      <h1 class="page__title">Sella logo concepts<span class="page__title-dot"></span></h1>
+      <p class="page__sub">
+        Six fresh directions, each with one specific bold move called out below the title. Same review format: <strong>16 / 64 / 256 px</strong> on warm canvas and dark cool surface.
+      </p>
+      <nav class="toc">
+        <a href="#c1">01 — Heavy wordmark</a>
+        <a href="#c2">02 — Inverted wedge S</a>
+        <a href="#c3">03 — Saddle silhouette</a>
+        <a href="#c4">04 — Thin all-caps</a>
+        <a href="#c5">05 — Viewfinder</a>
+        <a href="#c6">06 — Clipped tag</a>
+      </nav>
+    </header>
+
+    <section class="concept" id="c1">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">01 · Heavy wordmark</span>
+          <h2 class="concept__title">"sella" with oversized dot</h2>
+        </div>
+        <p class="concept__rationale">
+          'sella' set in Inter Black with an oversized primary-500 dot scaled as a co-equal element to the type, not a polite terminator.
+        </p>
+        <span class="concept__bold-move">Bold move: dot at ~50% of cap-height</span>
+        <div class="concept__filename">concepts/v2/01-heavy-wordmark.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="16" alt="01 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="64" alt="01 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="256" alt="01 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="16" alt="01 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="64" alt="01 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="01-heavy-wordmark.svg" height="256" alt="01 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept" id="c2">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">02 · Inverted letterform</span>
+          <h2 class="concept__title">Wedge S, inverted</h2>
+        </div>
+        <p class="concept__rationale">
+          Brand-orange 'S' on cool-700 canvas — flips the brand fingerprint. Heavy stroke with butt terminals for confident, modern letterform; the orange becomes the figure, not the accent.
+        </p>
+        <span class="concept__bold-move">Bold move: orange dominant, cool ground</span>
+        <div class="concept__filename">concepts/v2/02-inverted-wedge-s.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="16" alt="02 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="64" alt="02 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="256" alt="02 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="16" alt="02 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="64" alt="02 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="02-inverted-wedge-s.svg" height="256" alt="02 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept" id="c3">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">03 · Figurative</span>
+          <h2 class="concept__title">Saddle silhouette</h2>
+        </div>
+        <p class="concept__rationale">
+          An abstracted saddle profile — pommel rise, seat dip, cantle rise — as a confident filled mass. Figurative where most software brands aren't, leaning hard into the etymology.
+        </p>
+        <span class="concept__bold-move">Bold move: software brand as silhouette</span>
+        <div class="concept__filename">concepts/v2/03-saddle-silhouette.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="16" alt="03 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="64" alt="03 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="256" alt="03 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="16" alt="03 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="64" alt="03 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="03-saddle-silhouette.svg" height="256" alt="03 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept" id="c4">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">04 · Wordmark, opposite extreme</span>
+          <h2 class="concept__title">"SELLA" thin caps + brand bar</h2>
+        </div>
+        <p class="concept__rationale">
+          'SELLA' set ultra-thin (Inter 200) and wide-tracked under a heavy primary-500 bar — institutional, precise, the wordmark's deliberate counterpoint to v2-1.
+        </p>
+        <span class="concept__bold-move">Bold move: orange bar as branding device, not punctuation</span>
+        <div class="concept__filename">concepts/v2/04-thin-allcaps.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="16" alt="04 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="64" alt="04 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="256" alt="04 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="16" alt="04 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="64" alt="04 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="04-thin-allcaps.svg" height="256" alt="04 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept" id="c5">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">05 · Geometric / structural</span>
+          <h2 class="concept__title">Viewfinder</h2>
+        </div>
+        <p class="concept__rationale">
+          Four corner brackets framing the primary-500 answer-dot — precision and focus made geometric. Conceptually: 'the answer is here, in this frame'.
+        </p>
+        <span class="concept__bold-move">Bold move: subject is the negative space, not the marks</span>
+        <div class="concept__filename">concepts/v2/05-viewfinder.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="16" alt="05 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="64" alt="05 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="256" alt="05 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="16" alt="05 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="64" alt="05 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="05-viewfinder.svg" height="256" alt="05 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="concept" id="c6">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">06 · Object metaphor</span>
+          <h2 class="concept__title">Clipped tag</h2>
+        </div>
+        <p class="concept__rationale">
+          An asymmetric horizontal record card with a cut top-right corner — references the document/identifier/manifest world without illustration. The orange dot lives in the cut, where the corner used to be.
+        </p>
+        <span class="concept__bold-move">Bold move: non-square proportions, intentional asymmetry</span>
+        <div class="concept__filename">concepts/v2/06-clipped-tag.svg</div>
+      </div>
+      <div class="panel panel--light">
+        <p class="panel__label">On warm canvas</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="16" alt="06 at 16px" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="64" alt="06 at 64px" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="256" alt="06 at 256px" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+      <div class="panel panel--dark">
+        <p class="panel__label">On dark surface</p>
+        <div class="row">
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="16" alt="06 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="64" alt="06 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+          <div class="cell"><div class="cell__stage"><img src="06-clipped-tag.svg" height="256" alt="06 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+        </div>
+      </div>
+    </section>
+
+    <p class="legend">
+      <strong>Notes:</strong> concepts <strong>01</strong> and <strong>04</strong> draw type directly on transparent canvas (no warm container), so they read weakly on dark — they'd need a light-on-dark variant. Concept <strong>02</strong> is intentionally inverted (cool-700 ground, orange figure), so it carries its own dark surface and looks the same on both panels. Concepts <strong>03 / 05 / 06</strong> carry a warm container and stay legible on either background.
+    </p>
+  </div>
+</body>
+</html>

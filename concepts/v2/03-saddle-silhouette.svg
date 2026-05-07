@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v2-3 — Saddle silhouette: an abstracted saddle profile (pommel, seat dip, cantle) as a confident filled mass — figurative where most software brands aren't, leaning hard into the etymology. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella saddle silhouette">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 44 176
+           C 56 108 84 84 108 102
+           C 120 112 124 124 128 128
+           C 132 124 136 112 148 102
+           C 172 84 200 108 212 176
+           Z"
+        fill="#2D2942"/>
+  <circle cx="128" cy="208" r="9" fill="#E96424"/>
+</svg>

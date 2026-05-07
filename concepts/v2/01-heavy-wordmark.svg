@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v2-1 — Heavy wordmark: 'sella' set in Inter Black with an oversized primary-500 dot scaled as a co-equal element to the type, not a polite terminator. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" role="img" aria-label="Sella heavy wordmark">
+  <text x="60" y="146"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="128"
+        font-weight="900"
+        fill="#2D2942"
+        letter-spacing="-7">sella</text>
+  <circle cx="492" cy="100" r="34" fill="#E96424"/>
+</svg>
