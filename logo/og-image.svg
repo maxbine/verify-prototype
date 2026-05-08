@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella OG / social share image — 1200×630. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Sella — calm, fast eligibility for home health agencies">
+  <defs>
+    <radialGradient id="canvas-glow" cx="22%" cy="14%" r="80%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#F2EFEC" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#EDE9E4" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="630" fill="url(#canvas-glow)"/>
+
+  <!-- Mark, centered-left -->
+  <g transform="translate(96, 175)">
+    <rect width="280" height="280" rx="62" ry="62" fill="#F2EFEC" stroke="#DDDAD4" stroke-width="1"/>
+    <rect x="61" y="61" width="158" height="158" rx="35" ry="35" fill="#2D2942"/>
+    <circle cx="188" cy="188" r="13" fill="#E96424"/>
+  </g>
+
+  <!-- Wordmark + tagline block -->
+  <g>
+    <text
+      x="448"
+      y="298"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="600"
+      font-size="148"
+      letter-spacing="-5.4"
+      fill="#2D2942"
+    >sella</text>
+    <circle cx="816" cy="298" r="15" fill="#E96424"/>
+
+    <!-- Caption-style label -->
+    <text
+      x="448"
+      y="354"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="500"
+      font-size="13"
+      letter-spacing="2.4"
+      fill="#8A8893"
+    >SELLA HEALTH</text>
+
+    <!-- Tagline -->
+    <text
+      x="448"
+      y="430"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="500"
+      font-size="34"
+      letter-spacing="-0.6"
+      fill="#3D3A55"
+    >Calm, fast eligibility for home health agencies.</text>
+  </g>
+
+  <!-- Footer URL -->
+  <text
+    x="96"
+    y="568"
+    font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+    font-weight="500"
+    font-size="16"
+    letter-spacing="0.4"
+    fill="#8A8893"
+  >sellahealth.com</text>
+</svg>

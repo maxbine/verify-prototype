@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella canvas mark — single-color dark, for use on light backgrounds. -->
+<!-- The answer-dot becomes a circular cutout, preserving the "single moment of clarity" idea in monochrome. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella">
+  <defs>
+    <mask id="sella-dot-cutout-dark">
+      <rect width="256" height="256" fill="#fff"/>
+      <circle cx="172" cy="172" r="12" fill="#000"/>
+    </mask>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#2D2942" mask="url(#sella-dot-cutout-dark)"/>
+</svg>

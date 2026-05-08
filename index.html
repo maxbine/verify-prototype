@@ -3,100 +3,379 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#FFFFFF" />
-  <title>Verify — Eligibility Prototype</title>
+  <meta name="theme-color" content="#F2EFEC" />
+
+  <title>Sella — calm, fast eligibility for home health agencies</title>
+  <meta name="description" content="Sella is the eligibility tool designed for the person standing in a hospital hallway. Applied business rules, not raw payer data dumps. In private beta." />
+
+  <link rel="icon" href="logo/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="logo/favicon.svg" />
+
+  <meta property="og:title" content="Sella — calm, fast eligibility for home health agencies" />
+  <meta property="og:description" content="The eligibility tool designed for the person standing in a hospital hallway. Applied business rules, not raw payer data dumps." />
+  <meta property="og:image" content="logo/og-image.svg" />
+  <meta property="og:url" content="https://sellahealth.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-  <div class="stage">
-    <aside class="demo-drawer" id="demoDrawer" aria-label="Prototype navigation">
-      <div class="demo-drawer__brand">
-        <div class="demo-drawer__brand-mark"></div>
-        <div>
-          <div class="demo-drawer__brand-name">Verify</div>
-          <div class="demo-drawer__brand-sub">Eligibility prototype</div>
-        </div>
-      </div>
 
-      <div class="demo-drawer__group">
-        <div class="demo-drawer__group-label">Hero flow</div>
-        <button class="demo-drawer__btn" data-jump="hero-margaret">Margaret Johnson · Eligible</button>
-        <button class="demo-drawer__btn" data-jump="hero-robert">Robert Chen · Action Needed</button>
-        <button class="demo-drawer__btn" data-jump="hero-patricia">Patricia Williams · Not Eligible</button>
-        <button class="demo-drawer__btn" data-jump="hero-frank">Frank Sullivan · System Error</button>
-      </div>
-
-      <div class="demo-drawer__group">
-        <div class="demo-drawer__group-label">Screens</div>
-        <button class="demo-drawer__btn" data-screen="signin">Sign in</button>
-        <button class="demo-drawer__btn" data-screen="biometric">Biometric unlock</button>
-        <button class="demo-drawer__btn" data-screen="home">Home</button>
-        <button class="demo-drawer__btn" data-screen="newCheck">New check</button>
-        <button class="demo-drawer__btn" data-screen="history">History</button>
-        <button class="demo-drawer__btn" data-screen="profile">Profile</button>
-      </div>
-
-      <div class="demo-drawer__group">
-        <div class="demo-drawer__group-label">Demo controls</div>
-        <button class="demo-drawer__btn" id="toggleOffline">Toggle offline banner</button>
-        <button class="demo-drawer__btn" id="resetDemo">Reset prototype</button>
-        <a class="demo-drawer__btn" data-feedback-link href="#" target="_blank" rel="noopener">Send feedback →</a>
-      </div>
-
-      <div class="demo-drawer__footer">
-        <span>iPhone · 390 × 844</span>
-        <span>Light theme · v1</span>
-      </div>
-    </aside>
-
-    <main class="device-area">
-      <button class="drawer-toggle" id="drawerToggle" aria-label="Toggle nav drawer">
-        <i data-lucide="panel-left"></i>
-      </button>
-
-      <div class="device" id="device">
-        <div class="device__frame">
-          <div class="device__notch"></div>
-
-          <div class="device__status-bar">
-            <span class="status-time">9:41</span>
-            <span class="status-icons">
-              <i data-lucide="signal"></i>
-              <i data-lucide="wifi"></i>
-              <span class="status-battery">
-                <span class="status-battery__fill"></span>
-              </span>
-            </span>
-          </div>
-
-          <div class="device__screen" id="screen">
-            <!-- Active screen renders here -->
-          </div>
-
-          <div class="device__home-indicator"></div>
-        </div>
-      </div>
-    </main>
-
-    <div class="modal-root" id="modalRoot"></div>
-    <div class="toast-root" id="toastRoot"></div>
-
-    <a class="feedback-fab" data-feedback-link href="#" target="_blank" rel="noopener" aria-label="Send feedback">
-      <i data-lucide="message-square"></i>
-      <span>Send feedback</span>
+  <!-- ============================================================
+       NAV — fixed, minimal, single CTA on the right
+       ============================================================ -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="/" aria-label="Sella, home">
+      <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#F2EFEC"/>
+        <rect x="5" y="5" width="22" height="22" rx="5" fill="#2D2942"/>
+        <circle cx="22" cy="22" r="2.6" fill="#E96424"/>
+      </svg>
+      <span class="nav__wordmark">sella<span class="nav__dot" aria-hidden="true"></span></span>
     </a>
+    <button class="btn btn--primary nav__cta" data-open-demo>Book a demo</button>
+  </header>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>PRIVATE BETA · 2026</p>
+        <h1 class="hero__title" id="hero-title">
+          Eligibility,<br/>
+          the moment<br/>
+          you need it<span class="dot dot--lg" aria-hidden="true"></span>
+        </h1>
+        <p class="hero__sub">
+          Sella checks coverage across Medicare, Medicare Advantage, Medicaid, and commercial payers — and applies your agency's business rules to give you a verdict, not a data dump. Built for the field.
+        </p>
+        <div class="hero__ctas">
+          <button class="btn btn--primary btn--lg" data-open-demo>Book a demo</button>
+          <a class="btn btn--ghost btn--lg" href="#how">See how it works <span class="btn__arrow">→</span></a>
+        </div>
+        <p class="hero__trust">
+          In private beta with a New&nbsp;Jersey home health agency. HIPAA-compliant. BAA available.
+        </p>
+      </div>
+
+      <div class="hero__art">
+        <div class="hero__art-frame">
+          <img src="assets/screens/hero-screen.svg" alt="Sella eligibility check showing Margaret Johnson is eligible for home health services" width="380" height="760" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROBLEM
+       ============================================================ -->
+  <section class="problem" aria-labelledby="problem-title">
+    <div class="container">
+      <p class="eyebrow"><span class="eyebrow__pip"></span>THE PROBLEM</p>
+      <h2 class="section-h2 section-h2--editorial" id="problem-title">
+        A liaison is standing in a hospital hallway.<br/>
+        A referral just came in. The phone is in their hand.
+      </h2>
+      <div class="problem__body">
+        <p>
+          The portal is slow. The EHR module is desktop-only. The spreadsheet is back at the office. They could call the office and wait. They could guess. They could write it down for later.
+        </p>
+        <p>
+          By the time the answer comes, the patient has gone to whoever responded first.
+        </p>
+        <p class="problem__verdict">
+          Speed-to-response is how home health agencies win or lose referrals. Sella is the tool that lets them win.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRODUCT — three answers
+       ============================================================ -->
+  <section class="product" aria-labelledby="product-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>THE PRODUCT</p>
+        <h2 class="section-h2" id="product-title">One screen. Three answers<span class="dot" aria-hidden="true"></span></h2>
+        <p class="section-lede">
+          The right answer beats the complete answer. Sella applies your business rules to the payer's response and gives you a verdict — with the evidence underneath.
+        </p>
+      </header>
+
+      <div class="cards-row">
+        <article class="card-shell">
+          <img src="assets/screens/card-eligible.svg" alt="Eligible result for Margaret Johnson" width="360" height="440" loading="lazy"/>
+        </article>
+        <article class="card-shell">
+          <img src="assets/screens/card-action-needed.svg" alt="Action Needed result for Patricia Williams — active home health episode" width="360" height="440" loading="lazy"/>
+        </article>
+        <article class="card-shell">
+          <img src="assets/screens/card-not-eligible.svg" alt="Not Eligible result for Robert Chen — plan excludes home health" width="360" height="440" loading="lazy"/>
+        </article>
+      </div>
+
+      <aside class="system-error-note">
+        <div class="system-error-note__copy">
+          <p class="eyebrow"><span class="eyebrow__pip eyebrow__pip--neutral"></span>AND WHEN THE PAYER DOESN'T ANSWER</p>
+          <h3 class="sysnote__h">System failures don't look like coverage failures.</h3>
+          <p class="sysnote__body">
+            A timeout, a payer rejection, a malformed response — each gets a distinct visual treatment that says, plainly: <em>this is not a coverage decision</em>. The user knows the difference. So does anyone reading the shared PDF.
+          </p>
+        </div>
+        <div class="system-error-note__art">
+          <img src="assets/screens/card-system-error.svg" alt="System error card explicitly stating: this is not a coverage decision" width="360" height="440" loading="lazy"/>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       POSITIONING — what Sella isn't
+       ============================================================ -->
+  <section class="positioning" aria-labelledby="positioning-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>POSITIONING</p>
+        <h2 class="section-h2" id="positioning-title">
+          Not a portal. Not a CRM. Not an EHR<span class="dot" aria-hidden="true"></span>
+        </h2>
+        <p class="section-lede">
+          Sella does one thing — turn payer data into an answer your liaison can act on. Here's what we replace.
+        </p>
+      </header>
+
+      <div class="comparison">
+        <article class="compare-item">
+          <h3 class="compare-item__h">vs. payer portals</h3>
+          <p class="compare-item__body">Bureaucratic, slow, single-payer, desktop-only. We are cross-payer, fast, mobile-first.</p>
+        </article>
+        <article class="compare-item">
+          <h3 class="compare-item__h">vs. EHR eligibility modules</h3>
+          <p class="compare-item__body">Bolted onto a clinical tool. Built for the back office. We're built for the field.</p>
+        </article>
+        <article class="compare-item">
+          <h3 class="compare-item__h">vs. spreadsheets and "I'll check Monday"</h3>
+          <p class="compare-item__body">The actual incumbent. The thing we displace day one.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HOW IT WORKS
+       ============================================================ -->
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>HOW IT WORKS</p>
+        <h2 class="section-h2" id="how-title">Three steps. Seconds, not minutes<span class="dot" aria-hidden="true"></span></h2>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">01</span>
+          <h3 class="step__h">Pick the payer.</h3>
+          <p class="step__body">The form adapts — Medicare needs an MBI, Medicaid wants a member ID, commercial wants a group number. We never show fields the payer doesn't need.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">02</span>
+          <h3 class="step__h">Snap the face sheet — or type.</h3>
+          <p class="step__body">Photograph the insurance card or face sheet and Sella auto-fills the form. Or just type. The manual path is the default; the photo is a power-user shortcut.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">03</span>
+          <h3 class="step__h">Get a verdict, with evidence.</h3>
+          <p class="step__body">Eligible, Action Needed, or Not Eligible — with the supporting facts. Toggle between Plain English and the raw 271 response when you want to see the work.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BUILT FOR THE FIELD — feature grid
+       ============================================================ -->
+  <section class="field" aria-labelledby="field-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>BUILT FOR THE FIELD</p>
+        <h2 class="section-h2" id="field-title">Designed for a phone in one hand<span class="dot" aria-hidden="true"></span></h2>
+        <p class="section-lede">
+          The user is mobile-first because the user is mobile. Hospital hallways, SNF lobbies, the parking garage between visits.
+        </p>
+      </header>
+
+      <div class="features">
+        <article class="feature">
+          <h3 class="feature__h">Mobile-first.</h3>
+          <p class="feature__body">iOS and Android. Glove-friendly tap targets. Designed for one-handed operation.</p>
+        </article>
+        <article class="feature">
+          <h3 class="feature__h">Connectivity-tolerant.</h3>
+          <p class="feature__body">Hospital basement, parking garage — Sella holds your work and runs the check the moment signal returns.</p>
+        </article>
+        <article class="feature">
+          <h3 class="feature__h">Share as PDF.</h3>
+          <p class="feature__body">Send the verdict back to the referral source through the iOS share sheet. Branded, signed, and clearly marked when it isn't a coverage decision.</p>
+        </article>
+        <article class="feature">
+          <h3 class="feature__h">Cross-payer.</h3>
+          <p class="feature__body">Medicare FFS. Medicare Advantage. Medicaid. Commercial. National coverage from day one.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MISSION — full-bleed, the brand moment
+       ============================================================ -->
+  <section class="mission" aria-labelledby="mission-title">
+    <div class="mission__canvas">
+      <div class="mission__inner">
+        <p class="eyebrow eyebrow--inverted"><span class="eyebrow__pip"></span>WHY SELLA</p>
+        <h2 class="mission__h" id="mission-title">
+          Sella exists to bring peace and serenity<br/>
+          to one of the most chaotic parts of the<br/>
+          home health agency's day<span class="dot dot--md" aria-hidden="true"></span>
+        </h2>
+        <p class="mission__etymology">
+          <em>Sella</em>&nbsp;·&nbsp;from the Hebrew root meaning a moment to pause and reflect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUST
+       ============================================================ -->
+  <section class="trust" aria-labelledby="trust-title">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>SECURITY &amp; TRUST</p>
+        <h2 class="section-h2" id="trust-title">We handle PHI. The product reflects that<span class="dot" aria-hidden="true"></span></h2>
+      </header>
+
+      <div class="trust__body">
+        <p>
+          Sella is HIPAA-compliant, and we'll sign a Business Associate Agreement with your agency. Patient data is encrypted in transit and at rest, and stays scoped to your tenant.
+        </p>
+        <p class="trust__roadmap">
+          SOC 2 Type II is on our 2026 roadmap. Until then, security details are available on request.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA
+       ============================================================ -->
+  <section class="cta-final" aria-labelledby="cta-final-title">
+    <div class="container cta-final__inner">
+      <h2 class="cta-final__h" id="cta-final-title">
+        See Sella in your agency's workflow<span class="dot dot--md" aria-hidden="true"></span>
+      </h2>
+      <p class="cta-final__body">
+        We're onboarding a small set of design-partner agencies during private beta. A 30-minute walkthrough is the fastest way to see the fit.
+      </p>
+      <button class="btn btn--primary btn--lg" data-open-demo>Book a demo</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="foot">
+    <div class="container foot__inner">
+      <div class="foot__brand">
+        <svg class="foot__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#F2EFEC"/>
+          <rect x="5" y="5" width="22" height="22" rx="5" fill="#2D2942"/>
+          <circle cx="22" cy="22" r="2.6" fill="#E96424"/>
+        </svg>
+        <span class="foot__name">Sella Health, Inc.</span>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="mailto:hello@sellahealth.com">Contact</a>
+        <a href="#" data-open-demo>Book a demo</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+      </nav>
+      <p class="foot__copy">
+        &copy; <span id="copyYear">2026</span> Sella Health, Inc. · sellahealth.com
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       DEMO MODAL — qualifying form
+       ============================================================ -->
+  <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" hidden>
+    <div class="modal__backdrop" data-close-demo></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close-demo aria-label="Close">×</button>
+
+      <div class="modal__body" id="demoFormWrap">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>BOOK A DEMO</p>
+        <h2 class="modal__title" id="demoModalTitle">A 30-minute walkthrough<span class="dot" aria-hidden="true"></span></h2>
+        <p class="modal__lede">
+          Tell us a bit about your agency and we'll be in touch within one business day.
+        </p>
+
+        <form class="form" id="demoForm" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="f-name">Your name</label>
+            <input class="form__input" type="text" id="f-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-email">Work email</label>
+            <input class="form__input" type="email" id="f-email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-agency">Agency name</label>
+            <input class="form__input" type="text" id="f-agency" name="agency" required autocomplete="organization" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-role">Your role</label>
+            <select class="form__input form__select" id="f-role" name="role" required>
+              <option value="">Choose one…</option>
+              <option>Owner</option>
+              <option>Director of Operations</option>
+              <option>Director of Intake</option>
+              <option>Liaison / Marketing rep</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit" id="demoSubmit">Request a demo</button>
+          </div>
+          <p class="form__fineprint">
+            We'll only contact you about Sella. No newsletter, no third parties.
+          </p>
+        </form>
+      </div>
+
+      <div class="modal__body modal__thanks" id="demoThanks" hidden>
+        <p class="eyebrow"><span class="eyebrow__pip"></span>THANKS</p>
+        <h2 class="modal__title">Got it. We'll be in touch<span class="dot" aria-hidden="true"></span></h2>
+        <p class="modal__lede">
+          One of the founders will reply within one business day. If it's urgent, you can also email <a href="mailto:hello@sellahealth.com">hello@sellahealth.com</a>.
+        </p>
+        <button class="btn btn--ghost" data-close-demo>Close</button>
+      </div>
+    </div>
   </div>
 
-  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="landing.js"></script>
 </body>
 </html>

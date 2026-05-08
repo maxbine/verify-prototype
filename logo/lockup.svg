@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella lockup — mark + wordmark, for header / nav / signature use. -->
+<!-- Clear-space rule: keep at least 1× the height of the mark of empty space on every side. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 128" width="480" height="128" role="img" aria-label="Sella Health">
+  <!-- Mark (scaled to 96×96, vertically centered in the 128 viewBox) -->
+  <g transform="translate(0, 16)">
+    <rect x="0" y="0" width="96" height="96" rx="21" ry="21" fill="#F2EFEC"/>
+    <rect x="21" y="21" width="54" height="54" rx="12" ry="12" fill="#2D2942"/>
+    <circle cx="64.5" cy="64.5" r="4.5" fill="#E96424"/>
+  </g>
+
+  <!-- Wordmark — baseline aligned to optical center of mark -->
+  <text
+    x="120"
+    y="84"
+    font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+    font-weight="600"
+    font-size="68"
+    letter-spacing="-2.4"
+    fill="#2D2942"
+  >sella</text>
+  <circle cx="298" cy="84" r="7" fill="#E96424"/>
+</svg>
