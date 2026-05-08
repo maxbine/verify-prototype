@@ -4,10 +4,10 @@
   <style><![CDATA[
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
   ]]></style>
-  <circle cx="60" cy="58" r="11" fill="#FCDCC8"/>
-  <circle cx="60" cy="98" r="15" fill="#F4B58D"/>
-  <circle cx="60" cy="146" r="22" fill="#E96424"/>
-  <text x="108" y="168"
+  <circle cx="60" cy="38" r="14" fill="#FCDCC8"/>
+  <circle cx="60" cy="82" r="20" fill="#F4B58D"/>
+  <circle cx="60" cy="140" r="28" fill="#E96424"/>
+  <text x="116" y="168"
         font-family="'Quicksand', 'Comfortaa', 'Avenir Next', 'Futura', sans-serif"
         font-size="80"
         font-weight="400"
