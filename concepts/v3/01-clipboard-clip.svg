@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v3-1 — Clipboard clip: the trapezoidal binder clip every liaison's clipboard has, abstracted to a confident wedge with the brand-orange pivot dot at its center. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella clipboard clip mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 64 84
+           L 192 84
+           L 168 172
+           L 88 172
+           Z"
+        fill="#2D2942"/>
+  <circle cx="128" cy="128" r="11" fill="#E96424"/>
+</svg>

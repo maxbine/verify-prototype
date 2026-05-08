@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v3-4 — Highlight sweep: a heavy 'sella' wordmark with a primary-500 highlighter stroke through the x-height — the literal liaison gesture of marking the answer on a printed form. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" role="img" aria-label="Sella wordmark with highlighter stroke">
+  <rect x="40" y="80" width="540" height="64" fill="#E96424" transform="rotate(-3 310 112)"/>
+  <text x="60" y="146"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="128"
+        font-weight="900"
+        fill="#2D2942"
+        letter-spacing="-7">sella</text>
+</svg>

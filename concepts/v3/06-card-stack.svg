@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v3-6 — Card stack: three records rotated through angles, resolving into one cool-700 card on top — many sources synthesized into one verdict, the heart of the eligibility flow. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella card stack mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <rect x="60" y="60" width="120" height="120" rx="24" fill="#BAB6AE" transform="rotate(12 120 120)"/>
+  <rect x="60" y="60" width="120" height="120" rx="24" fill="#58566A" transform="rotate(6 120 120)"/>
+  <rect x="60" y="60" width="120" height="120" rx="24" fill="#2D2942"/>
+  <circle cx="172" cy="172" r="9" fill="#E96424"/>
+</svg>

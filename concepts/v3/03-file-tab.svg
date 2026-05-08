@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v3-3 — File tab: the manila-folder tab silhouette every records system uses; the brand-orange dot acts as the tab's color label, the way real liaisons mark priority. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella file tab mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 76 64
+           L 140 64
+           L 140 88
+           L 196 88
+           L 196 196
+           L 60 196
+           L 60 88
+           L 76 88
+           Z"
+        fill="#2D2942"/>
+  <circle cx="108" cy="76" r="5" fill="#E96424"/>
+</svg>

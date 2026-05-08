@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v3-2 — Folded card: the universal liaison gesture of folding a corner on a referral form to mark it; the flap shows the underside in a warmer cool tone. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella folded card mark">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 60 60
+           L 160 60
+           L 196 96
+           L 196 196
+           L 60 196
+           Z"
+        fill="#2D2942"/>
+  <path d="M 160 60
+           L 196 96
+           L 160 96
+           Z"
+        fill="#58566A"/>
+  <circle cx="172" cy="172" r="9" fill="#E96424"/>
+</svg>
