@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v4-1 — Vertical lockup: the clipboard clip stacked above the wordmark, primary-500 used only as the highlighter sweep through the type — no dot. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="400" height="320" role="img" aria-label="Sella vertical lockup — clip above highlighted wordmark">
+  <path d="M 144 56 L 256 56 L 240 132 L 160 132 Z" fill="#2D2942"/>
+  <rect x="40" y="192" width="320" height="58" fill="#E96424" transform="rotate(-3 200 221)"/>
+  <text x="200" y="248"
+        text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="92"
+        font-weight="900"
+        fill="#2D2942"
+        letter-spacing="-4">sella</text>
+</svg>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v4-4 — Wordmark with highlight: the standalone wordmark variant of the system; the highlighter extends past the type on both ends, like a real marker stroke. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="640" height="200" role="img" aria-label="Sella wordmark with highlighter sweep">
+  <rect x="20" y="80" width="580" height="64" fill="#E96424" transform="rotate(-3 310 112)"/>
+  <text x="60" y="146"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-size="128"
+        font-weight="900"
+        fill="#2D2942"
+        letter-spacing="-7">sella</text>
+</svg>

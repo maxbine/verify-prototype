@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Concept v4-5 — Clip-only mark: the standalone icon variant of the system, dot removed entirely; orange shows up when the wordmark is present, not in the icon. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella clip-only icon">
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC"/>
+  <path d="M 64 84 L 192 84 L 168 172 L 88 172 Z" fill="#2D2942"/>
+</svg>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sella logo concepts v4 — review</title>
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      if (!path.endsWith('/') && !/\.[a-z0-9]+$/i.test(path)) {
+        var base = document.createElement('base');
+        base.href = path + '/';
+        document.head.insertBefore(base, document.head.firstChild);
+      }
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-500: #E96424;
+      --cool-100: #DDDDE1;
+      --cool-200: #BEBDC4;
+      --cool-300: #8A8893;
+      --cool-400: #58566A;
+      --cool-700: #2D2942;
+      --warm-50: #FFFFFF;
+      --warm-100: #F2EFEC;
+      --warm-200: #DDDAD4;
+      --dark-bg: #14121F;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: var(--cool-700);
+      background: var(--warm-100);
+      -webkit-font-smoothing: antialiased;
+    }
+    .page { max-width: 1200px; margin: 0 auto; padding: 56px 32px 96px; }
+    .page__header { margin-bottom: 56px; padding-bottom: 32px; border-bottom: 1px solid var(--cool-100); }
+    .page__eyebrow {
+      display: inline-block;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--primary-500);
+      margin: 0 0 8px;
+    }
+    .page__title { font-size: 36px; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 8px; }
+    .page__title-dot {
+      display: inline-block;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--primary-500);
+      margin-left: 4px; vertical-align: 6px;
+    }
+    .page__sub {
+      font-size: 15px; color: var(--cool-400); margin: 0;
+      max-width: 64ch; line-height: 1.55;
+    }
+    .page__sub strong { color: var(--cool-700); font-weight: 600; }
+    .page__back {
+      display: inline-block; font-size: 13px;
+      color: var(--cool-400); text-decoration: none;
+      margin-bottom: 12px; padding: 4px 0;
+    }
+    .page__back:hover { color: var(--cool-700); }
+    .premise {
+      margin-top: 24px;
+      padding: 16px 18px;
+      background: var(--warm-50);
+      border: 1px solid var(--cool-100);
+      border-radius: 12px;
+      font-size: 13px; color: var(--cool-400); line-height: 1.55;
+      max-width: 72ch;
+    }
+    .premise strong { color: var(--cool-700); font-weight: 600; }
+    .premise-list { margin: 8px 0 0; padding-left: 18px; }
+    .premise-list li { margin-bottom: 4px; }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .toc a {
+      font-size: 13px; color: var(--cool-400); text-decoration: none;
+      padding: 6px 12px; border: 1px solid var(--cool-100);
+      border-radius: 999px; background: var(--warm-50);
+      transition: color 150ms ease-out, border-color 150ms ease-out;
+    }
+    .toc a:hover { color: var(--cool-700); border-color: var(--cool-300); }
+
+    .concept {
+      background: var(--warm-50);
+      border: 1px solid var(--cool-100);
+      border-radius: 16px;
+      margin-bottom: 32px;
+      overflow: hidden;
+    }
+    .concept__header { padding: 28px 32px 24px; border-bottom: 1px solid var(--cool-100); }
+    .concept__meta {
+      display: flex; align-items: baseline; gap: 16px;
+      margin-bottom: 10px; flex-wrap: wrap;
+    }
+    .concept__num {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cool-300);
+    }
+    .concept__title { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; margin: 0; }
+    .concept__rationale {
+      font-size: 14px; color: var(--cool-400); margin: 0;
+      max-width: 76ch; line-height: 1.55;
+    }
+    .concept__orange-use {
+      display: inline-block;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--primary-500);
+      margin-top: 8px;
+    }
+    .concept__filename {
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 12px; color: var(--cool-300); margin-top: 6px;
+    }
+
+    .panel { padding: 32px; overflow-x: auto; }
+    .panel--light { background: var(--warm-50); }
+    .panel--dark { background: var(--dark-bg); }
+    .panel + .panel { border-top: 1px solid var(--cool-100); }
+    .panel--dark + .panel,
+    .panel + .panel--dark { border-top-color: rgba(255, 255, 255, 0.08); }
+
+    .panel__label {
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cool-300);
+      margin: 0 0 20px;
+    }
+    .panel--dark .panel__label { color: rgba(255, 255, 255, 0.45); }
+
+    .row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 32px; }
+    .cell { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cell__stage { display: flex; align-items: flex-end; min-height: 16px; }
+    .cell__stage img { display: block; max-width: none; }
+    .cell__caption {
+      font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+      font-size: 11px; color: var(--cool-300); letter-spacing: 0.02em;
+    }
+    .panel--dark .cell__caption { color: rgba(255, 255, 255, 0.45); }
+
+    .legend {
+      margin-top: 8px; padding: 14px 16px;
+      background: var(--warm-100); border: 1px solid var(--cool-100);
+      border-radius: 12px; font-size: 12px; color: var(--cool-400); line-height: 1.5;
+    }
+    .legend strong { color: var(--cool-700); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="page__header">
+      <a class="page__back" href="../v3/">← back to v3 concepts</a>
+      <p class="page__eyebrow">Version 4 · combo of v3-1 + v3-4, no more dot</p>
+      <h1 class="page__title">Sella logo concepts<span class="page__title-dot"></span></h1>
+      <p class="page__sub">
+        Six variants exploring the clip-and-highlight combination, with orange used as something other than a dot in every concept.
+      </p>
+      <div class="premise">
+        <strong>The brief, in your words:</strong> "maybe a combo of 1 (Clipboard clip) and 4 (Highlight sweep), and stop being so married to the dot."
+        <ul class="premise-list">
+          <li>Clip = the icon (cool-700 trapezoid silhouette).</li>
+          <li>Highlight = the orange brand expression (a primary-500 stroke through the wordmark x-height, slightly tilted).</li>
+          <li>Variants explore vertical / horizontal / attached lockups, plus standalone wordmark, standalone icon, and an inverted color treatment.</li>
+        </ul>
+      </div>
+      <nav class="toc">
+        <a href="#c1">01 — Vertical lockup</a>
+        <a href="#c2">02 — Horizontal lockup</a>
+        <a href="#c3">03 — Clip attached</a>
+        <a href="#c4">04 — Wordmark + highlight</a>
+        <a href="#c5">05 — Clip-only icon</a>
+        <a href="#c6">06 — Inverted (orange clip)</a>
+      </nav>
+    </header>
+
+    <section class="concept" id="c1">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">01 · Vertical lockup</span>
+          <h2 class="concept__title">Clip above, wordmark below</h2>
+        </div>
+        <p class="concept__rationale">
+          Standard vertical brand-architecture lockup. Clip mark is the icon; wordmark with highlighter sweep sits underneath. Reads as a complete logo — works for packaging, hero placements, sign-in screens.
+        </p>
+        <span class="concept__orange-use">Orange use: highlighter sweep through wordmark</span>
+        <div class="concept__filename">concepts/v4/01-vertical-lockup.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="16" alt="01 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="64" alt="01 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="256" alt="01 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="16" alt="01 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="64" alt="01 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="01-vertical-lockup.svg" height="256" alt="01 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <section class="concept" id="c2">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">02 · Horizontal lockup</span>
+          <h2 class="concept__title">Clip beside wordmark</h2>
+        </div>
+        <p class="concept__rationale">
+          Horizontal sibling of v4-1. Reads better in nav bars, email signatures, narrow strips. The clip and the wordmark stay clearly separate elements rather than physically touching.
+        </p>
+        <span class="concept__orange-use">Orange use: highlighter sweep through wordmark</span>
+        <div class="concept__filename">concepts/v4/02-horizontal-lockup.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="16" alt="02 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="64" alt="02 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="256" alt="02 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="16" alt="02 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="64" alt="02 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="02-horizontal-lockup.svg" height="256" alt="02 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <section class="concept" id="c3">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">03 · Clip attached</span>
+          <h2 class="concept__title">Clip overlapping wordmark</h2>
+        </div>
+        <p class="concept__rationale">
+          The clip sits just above the wordmark like a real binder clip holding a sheet of paper — physical metaphor without illustration. The literal liaison artifact, made graphic.
+        </p>
+        <span class="concept__orange-use">Orange use: highlighter sweep through wordmark</span>
+        <div class="concept__filename">concepts/v4/03-clip-attached.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="16" alt="03 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="64" alt="03 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="256" alt="03 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="16" alt="03 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="64" alt="03 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="03-clip-attached.svg" height="256" alt="03 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <section class="concept" id="c4">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">04 · Wordmark + highlight</span>
+          <h2 class="concept__title">Wordmark alone</h2>
+        </div>
+        <p class="concept__rationale">
+          The wordmark variant of the system — for cases where the icon isn't needed (footers, in-line text, dense surfaces). The highlighter extends slightly past both ends of the type, like a real marker stroke that didn't quite stop on time.
+        </p>
+        <span class="concept__orange-use">Orange use: highlighter sweep, extends past type</span>
+        <div class="concept__filename">concepts/v4/04-wordmark-highlight.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="16" alt="04 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="64" alt="04 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="256" alt="04 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="16" alt="04 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="64" alt="04 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="04-wordmark-highlight.svg" height="256" alt="04 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <section class="concept" id="c5">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">05 · Clip-only icon</span>
+          <h2 class="concept__title">Standalone icon, no dot</h2>
+        </div>
+        <p class="concept__rationale">
+          The icon variant of the system — for favicons, app icons, anywhere only the mark is shown. Dot removed entirely; orange shows up only when the wordmark is present, never as a dressing on the icon. The clip earns its character from silhouette alone.
+        </p>
+        <span class="concept__orange-use">Orange use: none — orange lives in the wordmark when paired</span>
+        <div class="concept__filename">concepts/v4/05-clip-mark.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="16" alt="05 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="64" alt="05 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="256" alt="05 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="16" alt="05 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="64" alt="05 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="05-clip-mark.svg" height="256" alt="05 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <section class="concept" id="c6">
+      <div class="concept__header">
+        <div class="concept__meta">
+          <span class="concept__num">06 · Inverted</span>
+          <h2 class="concept__title">Orange clip + cool wordmark</h2>
+        </div>
+        <p class="concept__rationale">
+          Alternative orange placement — the clip itself carries the brand color, the wordmark stays straight cool-700, no highlighter. Useful for evaluating: does Sella feel right with orange in the icon, or in the gesture? Different psychology.
+        </p>
+        <span class="concept__orange-use">Orange use: clip color itself, no highlighter</span>
+        <div class="concept__filename">concepts/v4/06-orange-clip.svg</div>
+      </div>
+      <div class="panel panel--light"><p class="panel__label">On warm canvas</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="16" alt="06 at 16px" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="64" alt="06 at 64px" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="256" alt="06 at 256px" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+      <div class="panel panel--dark"><p class="panel__label">On dark surface</p><div class="row">
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="16" alt="06 at 16px on dark" /></div><span class="cell__caption">16px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="64" alt="06 at 64px on dark" /></div><span class="cell__caption">64px</span></div>
+        <div class="cell"><div class="cell__stage"><img src="06-orange-clip.svg" height="256" alt="06 at 256px on dark" /></div><span class="cell__caption">256px</span></div>
+      </div></div>
+    </section>
+
+    <p class="legend">
+      <strong>Notes:</strong> concepts <strong>01–04</strong> use transparent canvas (no warm container) so the wordmark and clip can sit on any background — they read weakly on dark and would need light-on-dark variants. Concept <strong>05</strong> carries its own warm container and stays legible everywhere. Concept <strong>06</strong> is transparent but the orange clip stays vivid on dark while the cool wordmark fades — that's a real signal worth weighing if you go that direction.
+    </p>
+  </div>
+</body>
+</html>
