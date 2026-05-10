@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sella canvas mark — single-color light, for use on dark backgrounds. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Sella">
-  <defs>
-    <mask id="sella-dot-cutout-light">
-      <rect width="256" height="256" fill="#fff"/>
-      <circle cx="172" cy="172" r="12" fill="#000"/>
-    </mask>
-  </defs>
-  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#F2EFEC" mask="url(#sella-dot-cutout-light)"/>
+<!-- Sella mark — single-color light, for use on dark backgrounds. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 128" width="64" height="128" role="img" aria-label="Sella">
+  <circle cx="32" cy="28" r="8"  fill="#F2EFEC" opacity="0.30"/>
+  <circle cx="32" cy="58" r="12" fill="#F2EFEC" opacity="0.60"/>
+  <circle cx="32" cy="94" r="20" fill="#F2EFEC" opacity="1"/>
 </svg>

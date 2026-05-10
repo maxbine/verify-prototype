@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sella lockup — mark + wordmark, for header / nav / signature use. -->
-<!-- Clear-space rule: keep at least 1× the height of the mark of empty space on every side. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 128" width="480" height="128" role="img" aria-label="Sella Health">
-  <!-- Mark (scaled to 96×96, vertically centered in the 128 viewBox) -->
-  <g transform="translate(0, 16)">
-    <rect x="0" y="0" width="96" height="96" rx="21" ry="21" fill="#F2EFEC"/>
-    <rect x="21" y="21" width="54" height="54" rx="12" ry="12" fill="#2D2942"/>
-    <circle cx="64.5" cy="64.5" r="4.5" fill="#E96424"/>
-  </g>
+<!-- Sella lockup — three-dot mark + wordmark. Bottom dot center sits roughly at the wordmark baseline. -->
+<!-- Clear-space rule: keep at least 1× the height of the bottom dot of empty space on every side. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 128" width="360" height="128" role="img" aria-label="Sella">
+  <!-- Mark: dots column, vertical center axis at x=24 -->
+  <circle cx="24" cy="32" r="8"  fill="#E96424" opacity="0.22"/>
+  <circle cx="24" cy="62" r="12" fill="#E96424" opacity="0.50"/>
+  <circle cx="24" cy="98" r="20" fill="#E96424" opacity="1"/>
 
-  <!-- Wordmark — baseline aligned to optical center of mark -->
+  <!-- Wordmark: baseline below bottom dot center, leaves room for descender clearance -->
   <text
-    x="120"
-    y="84"
+    x="64"
+    y="110"
     font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
     font-weight="600"
-    font-size="68"
-    letter-spacing="-2.4"
+    font-size="84"
+    letter-spacing="-3"
     fill="#2D2942"
   >sella</text>
-  <circle cx="298" cy="84" r="7" fill="#E96424"/>
 </svg>

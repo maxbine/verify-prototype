@@ -157,17 +157,6 @@ section {
 .dot--md { width: 14px; height: 14px; vertical-align: 8px; }
 .dot--lg { width: 24px; height: 24px; margin-left: 10px; vertical-align: 14px; }
 
-/* The wordmark dot inside the nav lockup */
-.nav__dot {
-  display: inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--primary-500);
-  margin-left: 1px;
-  vertical-align: 4px;
-}
-
 .section-h2 {
   font-size: var(--t-h2);
   font-weight: 600;
@@ -273,8 +262,8 @@ section {
   color: var(--cool-700);
 }
 .nav__mark {
-  width: 28px;
-  height: 28px;
+  width: 18px;
+  height: 32px;
   display: block;
 }
 .nav__wordmark {
@@ -665,7 +654,7 @@ section {
   align-items: center;
   gap: 10px;
 }
-.foot__mark { width: 24px; height: 24px; }
+.foot__mark { width: 14px; height: 24px; display: block; }
 .foot__name {
   font-size: 14px;
   font-weight: 500;

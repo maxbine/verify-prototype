@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sella wordmark — for use against light surfaces. The trailing dot is the orange answer-dot, set tight to the final 'a'. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" width="320" height="96" role="img" aria-label="Sella">
+<!-- Sella wordmark — type only. Pair with mark.svg or lockup.svg when an orange element is needed. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 96" width="280" height="96" role="img" aria-label="Sella">
   <text
     x="0"
     y="72"
@@ -10,5 +10,4 @@
     letter-spacing="-3"
     fill="#2D2942"
   >sella</text>
-  <circle cx="252" cy="72" r="9" fill="#E96424"/>
 </svg>
