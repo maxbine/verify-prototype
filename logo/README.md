@@ -6,7 +6,20 @@ the moment the verdict resolves.
 
 Every file in this folder is a working **SVG vector** — open natively in
 Illustrator, Figma, Affinity Designer, Inkscape, or any modern browser.
-For Illustrator users who want PDF/AI: open the SVG and `File → Save As`.
+
+For convenience, **PDF and PNG exports** of every asset are pre-rendered
+in `exports/` (PDFs are vector, PNGs at 256–3000px sweeps). Inter is
+loaded from Google Fonts during PNG rendering so the wordmark looks
+correct without any fonts installed locally.
+
+To regenerate exports after editing an SVG:
+
+```sh
+python scripts/export_logo.py
+```
+
+(One-time setup: `pip install --user playwright svglib reportlab` then
+`python -m playwright install chromium`.)
 
 ---
 
@@ -23,6 +36,8 @@ For Illustrator users who want PDF/AI: open the SVG and `File → Save As`.
 | `favicon.svg` | Mark inside a rounded warm-canvas square | Browser tabs, mobile bookmarks, anywhere under 32px. |
 | `og-image.svg` | 1200×630 social share asset | Twitter cards, LinkedIn previews, link unfurls. |
 | `specimen.svg` | All variants on one page | The handoff sheet — open this first to see the full system. |
+| `exports/pdf/` | PDF version of every SVG above | Open natively in Illustrator. Vector. |
+| `exports/png/` | PNG renders at multiple sizes | For platforms that don't accept SVG (slide decks, email signatures). |
 
 ---
 
