@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella lockup — three-dot mark + wordmark. Bottom dot center sits roughly at the wordmark baseline. -->
+<!-- Clear-space rule: keep at least 1× the height of the bottom dot of empty space on every side. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 128" width="360" height="128" role="img" aria-label="Sella">
+  <!-- Mark: dots column, vertical center axis at x=24 -->
+  <circle cx="24" cy="32" r="8"  fill="#E96424" opacity="0.22"/>
+  <circle cx="24" cy="62" r="12" fill="#E96424" opacity="0.50"/>
+  <circle cx="24" cy="98" r="20" fill="#E96424" opacity="1"/>
+
+  <!-- Wordmark: baseline below bottom dot center, leaves room for descender clearance -->
+  <text
+    x="64"
+    y="110"
+    font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+    font-weight="600"
+    font-size="84"
+    letter-spacing="-3"
+    fill="#2D2942"
+  >sella</text>
+</svg>

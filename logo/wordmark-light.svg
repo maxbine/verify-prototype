@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella wordmark — for use against dark surfaces. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 96" width="280" height="96" role="img" aria-label="Sella">
+  <text
+    x="0"
+    y="72"
+    font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+    font-weight="600"
+    font-size="84"
+    letter-spacing="-3"
+    fill="#F2EFEC"
+  >sella</text>
+</svg>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>Verify — Eligibility Prototype</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage">
+    <aside class="demo-drawer" id="demoDrawer" aria-label="Prototype navigation">
+      <div class="demo-drawer__brand">
+        <div class="demo-drawer__brand-mark"></div>
+        <div>
+          <div class="demo-drawer__brand-name">Verify</div>
+          <div class="demo-drawer__brand-sub">Eligibility prototype</div>
+        </div>
+      </div>
+
+      <div class="demo-drawer__group">
+        <div class="demo-drawer__group-label">Hero flow</div>
+        <button class="demo-drawer__btn" data-jump="hero-margaret">Margaret Johnson · Eligible</button>
+        <button class="demo-drawer__btn" data-jump="hero-robert">Robert Chen · Action Needed</button>
+        <button class="demo-drawer__btn" data-jump="hero-patricia">Patricia Williams · Not Eligible</button>
+        <button class="demo-drawer__btn" data-jump="hero-frank">Frank Sullivan · System Error</button>
+      </div>
+
+      <div class="demo-drawer__group">
+        <div class="demo-drawer__group-label">Screens</div>
+        <button class="demo-drawer__btn" data-screen="signin">Sign in</button>
+        <button class="demo-drawer__btn" data-screen="biometric">Biometric unlock</button>
+        <button class="demo-drawer__btn" data-screen="home">Home</button>
+        <button class="demo-drawer__btn" data-screen="newCheck">New check</button>
+        <button class="demo-drawer__btn" data-screen="history">History</button>
+        <button class="demo-drawer__btn" data-screen="profile">Profile</button>
+      </div>
+
+      <div class="demo-drawer__group">
+        <div class="demo-drawer__group-label">Demo controls</div>
+        <button class="demo-drawer__btn" id="toggleOffline">Toggle offline banner</button>
+        <button class="demo-drawer__btn" id="resetDemo">Reset prototype</button>
+        <a class="demo-drawer__btn" data-feedback-link href="#" target="_blank" rel="noopener">Send feedback →</a>
+      </div>
+
+      <div class="demo-drawer__footer">
+        <span>iPhone · 390 × 844</span>
+        <span>Light theme · v1</span>
+      </div>
+    </aside>
+
+    <main class="device-area">
+      <button class="drawer-toggle" id="drawerToggle" aria-label="Toggle nav drawer">
+        <i data-lucide="panel-left"></i>
+      </button>
+
+      <div class="device" id="device">
+        <div class="device__frame">
+          <div class="device__notch"></div>
+
+          <div class="device__status-bar">
+            <span class="status-time">9:41</span>
+            <span class="status-icons">
+              <i data-lucide="signal"></i>
+              <i data-lucide="wifi"></i>
+              <span class="status-battery">
+                <span class="status-battery__fill"></span>
+              </span>
+            </span>
+          </div>
+
+          <div class="device__screen" id="screen">
+            <!-- Active screen renders here -->
+          </div>
+
+          <div class="device__home-indicator"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal-root" id="modalRoot"></div>
+    <div class="toast-root" id="toastRoot"></div>
+
+    <a class="feedback-fab" data-feedback-link href="#" target="_blank" rel="noopener" aria-label="Send feedback">
+      <i data-lucide="message-square"></i>
+      <span>Send feedback</span>
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

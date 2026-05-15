@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella OG / social share image — 1200×630, three-dot mark + wordmark + tagline. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Sella — calm, fast eligibility for home health, home care, and hospice agencies">
+  <defs>
+    <radialGradient id="canvas-glow" cx="22%" cy="14%" r="80%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#F2EFEC" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#EDE9E4" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1200" height="630" fill="url(#canvas-glow)"/>
+
+  <!-- Mark: three-dot column, vertical center axis at x=160 -->
+  <circle cx="160" cy="170" r="28" fill="#E96424" opacity="0.22"/>
+  <circle cx="160" cy="270" r="42" fill="#E96424" opacity="0.50"/>
+  <circle cx="160" cy="400" r="70" fill="#E96424" opacity="1"/>
+
+  <!-- Wordmark + caption + tagline block -->
+  <g>
+    <!-- Wordmark -->
+    <text
+      x="280"
+      y="430"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="600"
+      font-size="170"
+      letter-spacing="-6"
+      fill="#2D2942"
+    >sella</text>
+
+    <!-- Caption-style label -->
+    <text
+      x="280"
+      y="478"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="500"
+      font-size="13"
+      letter-spacing="2.4"
+      fill="#8A8893"
+    >SELLA HEALTH</text>
+
+    <!-- Tagline (two lines) -->
+    <text
+      x="280"
+      y="528"
+      font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+      font-weight="500"
+      font-size="32"
+      letter-spacing="-0.5"
+      fill="#3D3A55"
+    ><tspan x="280" dy="0">Calm, fast eligibility for home health,</tspan><tspan x="280" dy="42">home care, and hospice.</tspan></text>
+  </g>
+
+  <!-- Footer URL -->
+  <text
+    x="96"
+    y="588"
+    font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', sans-serif"
+    font-weight="500"
+    font-size="16"
+    letter-spacing="0.4"
+    fill="#8A8893"
+  >sellahealth.com</text>
+</svg>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella mark — three orange dots stacked vertically, fading from soft (top) to saturated (bottom). The "answer" resolves at the bottom. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 128" width="64" height="128" role="img" aria-label="Sella">
+  <circle cx="32" cy="28" r="8"  fill="#E96424" opacity="0.22"/>
+  <circle cx="32" cy="58" r="12" fill="#E96424" opacity="0.50"/>
+  <circle cx="32" cy="94" r="20" fill="#E96424" opacity="1"/>
+</svg>

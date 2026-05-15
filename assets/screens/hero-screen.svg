@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 760" width="380" height="760" role="img" aria-label="Sella eligibility check showing Margaret Johnson is eligible">
+  <defs>
+    <style>
+      .screen { fill: #FFFFFF; }
+      .ink { fill: #2D2942; }
+      .subtle { fill: #8A8893; }
+      .micro { fill: #BEBDC4; }
+      .stroke-soft { stroke: #DDDDE1; stroke-width: 1; fill: none; }
+
+      .status-time { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 14px; fill: #2D2942; }
+      .header-title { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 17px; fill: #2D2942; letter-spacing: -0.2px; }
+      .pill-text { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 11px; fill: #2D2942; letter-spacing: 0.4px; }
+
+      .verdict-label { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 1.6px; fill: #2E9667; }
+      .verdict-headline { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 24px; fill: #2D2942; letter-spacing: -0.5px; }
+
+      .row-label { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 11px; fill: #8A8893; letter-spacing: 1.2px; }
+      .row-value { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 15px; fill: #2D2942; }
+
+      .tab-active { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 13px; fill: #2D2942; }
+      .tab-idle { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 13px; fill: #8A8893; }
+
+      .btn-text { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 15px; fill: #FFFFFF; }
+      .link-text { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 13px; fill: #58566A; }
+    </style>
+
+    <filter id="screen-shadow" x="-20%" y="-10%" width="140%" height="120%">
+      <feDropShadow dx="0" dy="20" stdDeviation="32" flood-color="#2D2942" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#2D2942" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+
+  <!-- Screen container with soft shadow (no hardware bezel — more modern) -->
+  <rect x="10" y="10" width="360" height="740" rx="34" ry="34" class="screen" filter="url(#screen-shadow)"/>
+
+  <!-- Status bar -->
+  <g transform="translate(10, 10)">
+    <text x="32" y="28" class="status-time">9:41</text>
+    <!-- Right-side icons: signal, wifi, battery -->
+    <g transform="translate(282, 22)">
+      <!-- Signal bars -->
+      <rect x="0" y="6" width="3" height="4" rx="0.5" class="ink"/>
+      <rect x="5" y="3" width="3" height="7" rx="0.5" class="ink"/>
+      <rect x="10" y="0" width="3" height="10" rx="0.5" class="ink"/>
+      <!-- Wifi (simplified) -->
+      <path d="M22 8 a6 6 0 0 1 12 0" stroke="#2D2942" stroke-width="1.6" fill="none"/>
+      <path d="M25 8 a3 3 0 0 1 6 0" stroke="#2D2942" stroke-width="1.6" fill="none"/>
+      <circle cx="28" cy="8" r="1" class="ink"/>
+      <!-- Battery -->
+      <rect x="42" y="2" width="22" height="10" rx="2.5" stroke="#2D2942" stroke-width="1.2" fill="none"/>
+      <rect x="44" y="4" width="16" height="6" rx="1" class="ink"/>
+      <rect x="65" y="5" width="1.5" height="4" rx="0.5" class="ink"/>
+    </g>
+  </g>
+
+  <!-- App header -->
+  <g transform="translate(10, 60)">
+    <!-- Back chevron -->
+    <path d="M22 12 L14 18 L22 24" stroke="#2D2942" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="22" text-anchor="middle" class="header-title">Eligibility check</text>
+    <!-- Tiny mark on the right -->
+    <g transform="translate(326, 6)">
+      <rect width="24" height="24" rx="6" fill="#F2EFEC"/>
+      <rect x="5" y="5" width="14" height="14" rx="3.5" class="ink"/>
+      <circle cx="16.2" cy="16.2" r="2" fill="#E96424"/>
+    </g>
+  </g>
+
+  <!-- Patient summary strip -->
+  <g transform="translate(34, 116)">
+    <text class="row-label" letter-spacing="1.2">PATIENT</text>
+    <text y="22" class="ink" font-family="Inter" font-weight="600" font-size="17" letter-spacing="-0.2">Margaret Johnson</text>
+    <text y="42" class="subtle" font-family="Inter" font-weight="400" font-size="13">DOB Mar 15, 1948 · Medicare FFS</text>
+  </g>
+
+  <!-- Result card -->
+  <g transform="translate(26, 196)">
+    <rect x="0" y="0" width="328" height="386" rx="20" ry="20" fill="#FBFAF9"/>
+    <rect x="0.5" y="0.5" width="327" height="385" rx="20" ry="20" class="stroke-soft"/>
+
+    <!-- Verdict header -->
+    <g transform="translate(24, 28)">
+      <circle cx="6" cy="6" r="6" fill="#2E9667"/>
+      <text x="22" y="11" class="verdict-label">ELIGIBLE</text>
+    </g>
+
+    <!-- Verdict statement w/ orange answer-dot as period -->
+    <g transform="translate(24, 70)">
+      <text class="verdict-headline">
+        <tspan x="0" dy="0">Eligible for home</tspan>
+        <tspan x="0" dy="32">health services</tspan>
+      </text>
+      <circle cx="170" cy="70" r="6" fill="#E96424"/>
+    </g>
+
+    <!-- Tab switcher -->
+    <g transform="translate(24, 168)">
+      <rect width="280" height="34" rx="10" fill="#F2EFEC"/>
+      <rect x="3" y="3" width="138" height="28" rx="8" fill="#FFFFFF"/>
+      <text x="72" y="22" text-anchor="middle" class="tab-active">Plain English</text>
+      <text x="212" y="22" text-anchor="middle" class="tab-idle">Detailed</text>
+    </g>
+
+    <!-- Fact rows -->
+    <g transform="translate(24, 226)">
+      <text class="row-label">COVERAGE PERIOD</text>
+      <text y="22" class="row-value">Jan 1, 2026 — Dec 31, 2026</text>
+    </g>
+    <line x1="24" y1="272" x2="304" y2="272" stroke="#F0F0F2"/>
+    <g transform="translate(24, 290)">
+      <text class="row-label">PLAN</text>
+      <text y="22" class="row-value">Original Medicare Part A &amp; B</text>
+    </g>
+    <line x1="24" y1="336" x2="304" y2="336" stroke="#F0F0F2"/>
+    <g transform="translate(24, 354)">
+      <text class="row-label">COST SHARE</text>
+      <text y="22" class="row-value">$0 deductible met</text>
+    </g>
+  </g>
+
+  <!-- Bottom action: Share as PDF -->
+  <g transform="translate(26, 612)">
+    <rect width="328" height="52" rx="14" fill="#2D2942"/>
+    <text x="164" y="32" text-anchor="middle" class="btn-text">Share as PDF</text>
+  </g>
+
+  <!-- Secondary link: View raw response -->
+  <g transform="translate(190, 698)">
+    <text text-anchor="middle" class="link-text">View raw 271 response →</text>
+  </g>
+</svg>

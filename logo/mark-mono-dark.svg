@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sella mark — single-color dark, for use on light backgrounds. The fading silhouette is preserved via opacity, so the "answer resolves at the bottom" idea survives in monochrome. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 128" width="64" height="128" role="img" aria-label="Sella">
+  <circle cx="32" cy="28" r="8"  fill="#2D2942" opacity="0.22"/>
+  <circle cx="32" cy="58" r="12" fill="#2D2942" opacity="0.50"/>
+  <circle cx="32" cy="94" r="20" fill="#2D2942" opacity="1"/>
+</svg>

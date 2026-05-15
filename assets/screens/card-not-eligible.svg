@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 440" width="360" height="440" role="img" aria-label="Not Eligible result card mockup">
+  <defs>
+    <style>
+      .card-bg { fill: #FFFFFF; }
+      .card-stroke { stroke: #DDDDE1; stroke-width: 1; fill: none; }
+      .label { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 1.5px; fill: #C7383F; }
+      .h { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 21px; fill: #2D2942; letter-spacing: -0.4px; }
+      .row-label { font-family: 'Inter', system-ui, sans-serif; font-weight: 400; font-size: 12px; fill: #8A8893; letter-spacing: 0.3px; }
+      .row-value { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 14px; fill: #2D2942; }
+      .raw-link { font-family: 'Inter', system-ui, sans-serif; font-weight: 500; font-size: 12px; fill: #58566A; }
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="359" height="439" rx="20" ry="20" class="card-bg"/>
+  <rect x="0.5" y="0.5" width="359" height="439" rx="20" ry="20" class="card-stroke"/>
+
+  <!-- Status badge -->
+  <g transform="translate(28, 36)">
+    <circle cx="6" cy="6" r="5" fill="#E94B4B"/>
+    <text x="22" y="10" class="label">NOT ELIGIBLE</text>
+  </g>
+
+  <!-- Headline -->
+  <g transform="translate(28, 80)">
+    <text class="h">
+      <tspan x="0" dy="0">Robert Chen is not</tspan>
+      <tspan x="0" dy="28">eligible for home health</tspan>
+      <tspan x="0" dy="28">under this plan</tspan>
+    </text>
+    <circle cx="160" cy="70" r="5" fill="#E96424"/>
+  </g>
+
+  <line x1="28" y1="206" x2="332" y2="206" stroke="#DDDDE1" stroke-width="1"/>
+
+  <!-- Fact rows -->
+  <g transform="translate(28, 232)">
+    <text class="row-label">REASON</text>
+    <text y="22" class="row-value">Plan excludes home health</text>
+  </g>
+  <g transform="translate(28, 290)">
+    <text class="row-label">PLAN</text>
+    <text y="22" class="row-value">BCBS Bronze HMO 4500</text>
+  </g>
+  <g transform="translate(28, 348)">
+    <text class="row-label">EFFECTIVE</text>
+    <text y="22" class="row-value">Jan 1, 2026 — active</text>
+  </g>
+
+  <g transform="translate(28, 410)">
+    <text class="raw-link">View raw 271 response →</text>
+  </g>
+</svg>
