@@ -13,10 +13,10 @@
        - Formspree:  https://formspree.io/f/YOUR_FORM_ID
        - Basin:      https://usebasin.com/f/YOUR_FORM_ID
      Or wire to your own backend. While the placeholder is set,
-     submissions fall back to a mailto: link to hello@sellahealth.com.
+     submissions fall back to a mailto: link to abe@sellahealth.com.
      ---------------------------------------------------------- */
   const FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/xxxxxx'
-  const FALLBACK_EMAIL = 'hello@sellahealth.com';
+  const FALLBACK_EMAIL = 'abe@sellahealth.com';
 
   /* ----------------------------------------------------------
      Nav scroll state — adds .is-scrolled past 8px scroll
