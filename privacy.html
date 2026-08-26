@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#F2EFEC" />
+
+  <title>Privacy Policy — Sella</title>
+  <meta name="description" content="How Sella Health collects, uses, and protects information on sellahealth.com and in the Sella eligibility apps." />
+
+  <link rel="icon" href="/logo/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/logo/favicon.svg" />
+
+  <meta property="og:title" content="Privacy Policy — Sella" />
+  <meta property="og:description" content="How Sella Health collects, uses, and protects information on sellahealth.com and in the Sella eligibility apps." />
+  <meta property="og:image" content="/logo/og-image.svg" />
+  <meta property="og:url" content="https://sellahealth.com/privacy" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/landing.css" />
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="/" aria-label="Sella, home">
+      <svg class="nav__mark" viewBox="0 0 18 32" aria-hidden="true">
+        <circle cx="9" cy="5"  r="2"   fill="#E96424" opacity="0.22"/>
+        <circle cx="9" cy="14" r="3.2" fill="#E96424" opacity="0.50"/>
+        <circle cx="9" cy="24" r="5"   fill="#E96424" opacity="1"/>
+      </svg>
+      <span class="nav__wordmark">sella</span>
+    </a>
+    <button class="btn btn--primary nav__cta" data-open-demo>Book a demo</button>
+  </header>
+
+  <main class="legal">
+    <div class="container legal__inner">
+      <p class="eyebrow"><span class="eyebrow__pip"></span>PRIVACY POLICY</p>
+      <h1 class="legal__title">Privacy Policy<span class="dot" aria-hidden="true"></span></h1>
+      <p class="legal__meta">Last updated: August 26, 2026 · Effective: August 26, 2026</p>
+      <p class="legal__lede">This policy explains what Sella collects, why we collect it, and how we handle protected health information for home health, home care, and hospice agencies.</p>
+      <h2>1. Who we are</h2>
+      <p>Sella Health, Inc. (“Sella,” “we,” “us”) provides an eligibility product for home health, home care, and hospice agencies. This policy covers <a href="https://sellahealth.com">sellahealth.com</a>, the Sella iOS and Android apps, and related APIs.</p>
+      <p>Clearinghouse or Medicare submitter functions may be performed by an affiliated entity, including Electronic Health Exchange LLC, under the same privacy practices described here.</p>
+
+      <h2>2. Scope</h2>
+      <p>Sella is a business-to-business tool. Agency staff sign in with their work account. We do not offer a consumer-facing patient app, and we do not sell advertising.</p>
+      <p>This policy does not replace a Business Associate Agreement (BAA) with your agency. If you have a signed BAA, that agreement controls how we handle protected health information (PHI) for your organization.</p>
+
+      <h2>3. Information we collect</h2>
+      <h3>Website visitors</h3>
+      <p>If you book a demo, we collect your name, work email, agency name, and role so we can respond. Demo requests are sent to our team (currently via email to <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a> unless a form endpoint is configured).</p>
+      <p>The marketing site is hosted on Vercel. Like most websites, the host may receive standard technical data such as IP address, browser type, and the pages requested, in order to serve the site and keep it secure. We do not run advertising pixels or a marketing-analytics SDK on this site.</p>
+
+      <h3>Sella app and product users</h3>
+      <p>When an agency user signs in, we collect:</p>
+      <ul>
+        <li>Work identity from Microsoft Entra ID (such as name, email, and tenant identifiers)</li>
+        <li>Agency and user settings needed to run eligibility checks</li>
+        <li>Patient or member details the user enters to run a check, which may include name, member ID or Medicare Beneficiary Identifier (MBI), date of birth, payer, and related coverage information</li>
+        <li>Eligibility requests and responses, including history the user is authorized to see</li>
+        <li>Optional insurance-card or face-sheet images, used to help fill the check form</li>
+        <li>Device and app diagnostics such as app version, platform, and sanitized error reports</li>
+      </ul>
+      <p>If the user enables Face ID, Touch ID, or similar biometrics, that check happens on the device. We do not receive biometric templates. We only store a local flag that faster sign-in is enabled.</p>
+
+      <h3>On-device card scanning</h3>
+      <p>Camera and photo-library access are used only to capture an insurance card or face sheet. Text recognition runs on the device to suggest form fields. Images are not used for advertising. Do not include patient information in screenshots or crash reports.</p>
+
+      <h2>4. How we use information</h2>
+      <p>We use information to:</p>
+      <ul>
+        <li>Authenticate users and keep sessions secure</li>
+        <li>Run eligibility checks against payers and return a verdict to the authorized user</li>
+        <li>Apply the agency’s contracted-payer and business rules</li>
+        <li>Show history, notes, and shareable summaries the user requests</li>
+        <li>Operate, secure, and troubleshoot the product</li>
+        <li>Respond to demo requests and support questions</li>
+        <li>Meet legal, contractual, and payer-network obligations</li>
+      </ul>
+      <p>We do not sell personal information or PHI. We do not use PHI for marketing.</p>
+
+      <h2>5. Protected health information</h2>
+      <p>Eligibility data can include PHI. We handle that information as a business associate for covered-entity customers, under HIPAA and your BAA. PHI stays scoped to the customer’s tenant. Workforce access is limited to people who need it to operate the service.</p>
+      <p>Sella does not diagnose, treat, or make coverage determinations on behalf of a payer. A Sella verdict is an operational reading of payer and program data for the agency user. It is not medical advice and not a guarantee of payment.</p>
+
+      <h2>6. How we share information</h2>
+      <p>We share information only as needed to provide the service:</p>
+      <ul>
+        <li>With the customer’s authorized users</li>
+        <li>With payers, CMS (including HETS), and eligibility networks or clearinghouses the check requires</li>
+        <li>With infrastructure and identity providers that host or authenticate the product</li>
+        <li>When required by law, or to protect Sella, our customers, or the public</li>
+        <li>In a merger, acquisition, or similar transaction, with appropriate safeguards</li>
+      </ul>
+      <p>We do not share information with advertising networks.</p>
+
+      <h2>7. Service providers</h2>
+      <p>We use vendors to operate Sella, including:</p>
+      <ul>
+        <li>Microsoft (Entra ID sign-in and Azure hosting of the product API)</li>
+        <li>Vercel (this website)</li>
+        <li>Eligibility and clearinghouse connections required to complete a check (for example CMS HETS and commercial eligibility networks)</li>
+        <li>Apple and Google, only as needed to distribute the mobile apps</li>
+      </ul>
+      <p>Vendors that handle PHI do so under appropriate agreements. A current list is available to customers on request.</p>
+
+      <h2>8. Retention</h2>
+      <p>We keep information for as long as needed to provide the service, meet payer and legal record requirements, resolve disputes, and enforce agreements. Customer-controlled records follow the retention terms in the customer agreement or BAA. Demo-form messages are kept only as long as needed to respond.</p>
+
+      <h2>9. Security</h2>
+      <p>We use administrative, technical, and physical safeguards appropriate to the sensitivity of eligibility data, including encryption in transit and at rest, tenant isolation, and authenticated access. See our <a href="/security">Security and HIPAA notice</a> for more detail. No method of transmission or storage is perfectly secure.</p>
+
+      <h2>10. Your choices and rights</h2>
+      <p>Agency users can sign out, and may be able to update profile details inside the product or through their Microsoft Entra administrator. Patients and members should contact the agency that ran the check, not Sella, for rights requests about their health information, unless the law requires us to respond directly.</p>
+      <p>Website visitors can ask us to delete a demo request by emailing <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a>.</p>
+      <p>Depending on where you live, you may have additional privacy rights. We will not discriminate against you for exercising them. Submit requests to <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a>.</p>
+
+      <h2>11. Children</h2>
+      <p>Sella is not directed to children. The product is for agency workforce use. We do not knowingly collect personal information from children for the marketing site.</p>
+
+      <h2>12. International users</h2>
+      <p>Sella is operated from the United States. If you access the site or product from elsewhere, you understand that information may be processed in the United States.</p>
+
+      <h2>13. Changes</h2>
+      <p>We may update this policy as the product changes. The “Last updated” date at the top will change when we do. Material changes will be posted on this page.</p>
+
+      <h2>14. Contact</h2>
+      <p>Privacy questions: <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a><br />
+      Sella Health, Inc. · sellahealth.com</p>
+      <p class="legal__note">
+        These pages describe how Sella works today. If something here does not match your contract or BAA, the signed agreement controls. Questions: <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <div class="container foot__inner">
+      <div class="foot__brand">
+        <svg class="foot__mark" viewBox="0 0 14 24" aria-hidden="true">
+          <circle cx="7" cy="4"  r="1.5" fill="#E96424" opacity="0.22"/>
+          <circle cx="7" cy="11" r="2.4" fill="#E96424" opacity="0.50"/>
+          <circle cx="7" cy="19" r="4"   fill="#E96424" opacity="1"/>
+        </svg>
+        <span class="foot__name">Sella Health, Inc.</span>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="mailto:abe@sellahealth.com">Contact</a>
+        <a href="#" data-open-demo>Book a demo</a>
+        <a href="/privacy" aria-current="page">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/security">Security</a>
+      </nav>
+      <p class="foot__copy">
+        &copy; <span id="copyYear">2026</span> Sella Health, Inc. · sellahealth.com
+      </p>
+    </div>
+  </footer>
+
+  <div class="modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" hidden>
+    <div class="modal__backdrop" data-close-demo></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" data-close-demo aria-label="Close">×</button>
+
+      <div class="modal__body" id="demoFormWrap">
+        <p class="eyebrow"><span class="eyebrow__pip"></span>BOOK A DEMO</p>
+        <h2 class="modal__title" id="demoModalTitle">A 30-minute walkthrough<span class="dot" aria-hidden="true"></span></h2>
+        <p class="modal__lede">
+          Tell us a bit about your agency and we'll be in touch within one business day.
+        </p>
+
+        <form class="form" id="demoForm" novalidate>
+          <div class="form__row">
+            <label class="form__label" for="f-name">Your name</label>
+            <input class="form__input" type="text" id="f-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-email">Work email</label>
+            <input class="form__input" type="email" id="f-email" name="email" required autocomplete="email" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-agency">Agency name</label>
+            <input class="form__input" type="text" id="f-agency" name="agency" required autocomplete="organization" />
+          </div>
+          <div class="form__row">
+            <label class="form__label" for="f-role">Your role</label>
+            <select class="form__input form__select" id="f-role" name="role" required>
+              <option value="">Choose one…</option>
+              <option>Owner</option>
+              <option>Director of Operations</option>
+              <option>Director of Intake</option>
+              <option>Liaison / Marketing rep</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form__actions">
+            <button class="btn btn--primary btn--lg" type="submit" id="demoSubmit">Request a demo</button>
+          </div>
+          <p class="form__fineprint">
+            We'll only contact you about Sella. No newsletter, no third parties.
+          </p>
+        </form>
+      </div>
+
+      <div class="modal__body modal__thanks" id="demoThanks" hidden>
+        <p class="eyebrow"><span class="eyebrow__pip"></span>THANKS</p>
+        <h2 class="modal__title">Got it. We'll be in touch<span class="dot" aria-hidden="true"></span></h2>
+        <p class="modal__lede">
+          One of the founders will reply within one business day. If it's urgent, you can also email <a href="mailto:abe@sellahealth.com">abe@sellahealth.com</a>.
+        </p>
+        <button class="btn btn--ghost" data-close-demo>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/landing.js"></script>
+</body>
+</html>
